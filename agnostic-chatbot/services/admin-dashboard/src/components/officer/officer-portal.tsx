@@ -37,7 +37,7 @@ export default function OfficerPortal() {
           type: c.category || 'Maintenance',
           loc: c.location || 'Pune Central',
           dist: (Math.random() * 5).toFixed(1) + "km",
-          priority: (c.priority || c.severity || 'Medium').charAt(0).toUpperCase() + (c.priority || c.severity || 'Medium').slice(1),
+          priority: String(c.priority || c.severity || 'Medium').charAt(0).toUpperCase() + String(c.priority || c.severity || 'Medium').slice(1),
           desc: c.description,
           lat: c.latitude || 18.5204,
           lng: c.longitude || 73.8567
