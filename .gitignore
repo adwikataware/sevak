@@ -22,3 +22,10 @@ yarn-error.log*
 # System Files
 .DS_Store
 Thumbs.db
+
+# Demo/Working Files
+before.jpeg
+after.jpeg
+flow.txt
+*.docx
+push_error.txt
