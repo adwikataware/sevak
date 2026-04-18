@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@theme {
+  --color-background: #efeadf;
+  --color-foreground: #1e1c1a;
+  --color-card: #fdfbf7;
+  --color-card-foreground: #1e1c1a;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1e1c1a;
+  --color-primary: #111111;
+  --color-primary-foreground: #f4f0eb;
+  --color-secondary: #eae5d9;
+  --color-secondary-foreground: #1e1c1a;
+  --color-muted: #eae5d9;
+  --color-muted-foreground: #736c64;
+  --color-accent: #d96c4a;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #c24127;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #d1cbc1;
+  --color-input: #d1cbc1;
+  --color-ring: #2c1e11;
+  --color-chart-1: #d96c4a;
+  --color-chart-2: #d99a36;
+  --color-chart-3: #4a7c59;
+  --color-chart-4: #2b2826;
+  --color-chart-5: #736c64;
+  --color-sidebar: #fdfbf7;
+  --color-sidebar-foreground: #2b2826;
+  --color-sidebar-primary: #2c1e11;
+  --color-sidebar-primary-foreground: #f4f0eb;
+  --color-sidebar-accent: #eae5d9;
+  --color-sidebar-accent-foreground: #2c1e11;
+  --color-sidebar-border: #d1cbc1;
+  --color-sidebar-ring: #2c1e11;
+  
+  --radius-sm: calc(0.25rem - 2px);
+  --radius-md: calc(0.25rem - 1px);
+  --radius-lg: 0.25rem;
+  --radius-xl: calc(0.25rem + 2px);
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /* Subtle paper texture and refined dots */
+  background-image: 
+    url("https://www.transparenttextures.com/patterns/felt.png"),
+    radial-gradient(var(--color-border) 0.5px, transparent 0.5px);
+  background-size: auto, 60px 60px;
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
